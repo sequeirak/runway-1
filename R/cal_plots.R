@@ -140,7 +140,7 @@ cal_plot_multi <- function(df, outcome, prediction, model, n_bins = 10, show_loe
     # geom_smooth(method = "lm", se = FALSE, linetype = "dashed",
     #            color = "black", formula = y~-1 + x) +
     # straight line fit through estimates
-    # geom_smooth(ggplot2::aes(x = get(prediction), y = as.numeric(outcome)),
+    # geom_smooth(ggplot2::aes(x = !!parse_expr(prediction), y = as.numeric(outcome)),
     #            color = "red", se = FALSE, method = "loess") +
     # loess fit through estimates
     # scale_color_viridis(discrete = TRUE, option = 'cividis', begin = 0.5) +
